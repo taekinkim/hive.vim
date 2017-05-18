@@ -1,7 +1,7 @@
 " Vim syntax file
 " Language:	HIVE Query Language
-" Maintainer:	dgold
-" Last Change:	2015-09-02
+" Maintainer: Jon Parise <jon@indelible.org>
+" Original Author: dgold
 "
 " Based off Oracle SQL syntax highlighting
 
@@ -27,7 +27,7 @@ syn keyword sqlKeyword	successful synonym table then to trigger uid
 syn keyword sqlKeyword	unique user validate values view whenever hivevar
 syn keyword sqlKeyword	where with option order pctfree privileges procedure
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
-syn keyword sqlKeyword	session share size smallint type using full outer join right inner true false
+syn keyword sqlKeyword	session share size smallint type using full outer join left right inner true false
 syn keyword sqlKeyword	format delimited fields terminated by collection items external
 syn keyword sqlKeyword	stored sequencefile partitioned data local inpath overwrite clustered buckets sorted
 syn keyword sqlKeyword	keys extended textfile location distribute directory tablesample using reduce lateral
