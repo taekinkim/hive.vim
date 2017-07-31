@@ -1,5 +1,5 @@
 " Vim syntax file
-" Language:	HIVE Query Language
+" Language:	Hive
 " Maintainer: Jon Parise <jon@indelible.org>
 " Original Author: dgold
 "
