@@ -11,17 +11,17 @@ are welcome!
 
 ## Installation
 
-### Using [Plug][]
+### Using [Plug](https://github.com/junegunn/vim-plug)
 
 1. Add `Plug 'jparise/hive.vim'` to `~/.vimrc`
 2. `vim +PluginInstall +qall`
 
-### Using [Vundle][]
+### Using [Vundle](https://github.com/gmarik/vundle)
 
 1. Add `Plugin 'jparise/hive.vim'` to `~/.vimrc`
 2. `vim +PluginInstall +qall`
 
-### Using [Pathogen][]
+### Using [Pathogen](https://github.com/tpope/vim-pathogen)
 
 1. `cd ~/.vim/bundle`
 2. `git clone https://github.com/jparise/hive.vim.git`
