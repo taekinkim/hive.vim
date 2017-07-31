@@ -11,12 +11,17 @@ are welcome!
 
 ## Installation
 
-Append these line to `~/.vimrc`:
+### Using [Plug][]
 
-```vim
-" for .hql files
-au BufNewFile,BufRead *.hql set filetype=hive expandtab
+1. Add `Plug 'jparise/hive.vim'` to `~/.vimrc`
+2. `vim +PluginInstall +qall`
 
-" for .q files
-au BufNewFile,BufRead *.q set filetype=hive expandtab
-```
+### Using [Vundle][]
+
+1. Add `Plugin 'jparise/hive.vim'` to `~/.vimrc`
+2. `vim +PluginInstall +qall`
+
+### Using [Pathogen][]
+
+1. `cd ~/.vim/bundle`
+2. `git clone https://github.com/jparise/hive.vim.git`
