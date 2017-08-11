@@ -69,7 +69,7 @@ syn keyword sqlType tinyint smallint int bigint float double boolean string
 syn keyword sqlType array map struct named_struct create_union timestamp date varchar char
 
 syn match hiveVar     "hive\.[a-zA-Z.]\+"
-syn match hiveVar     "mapred\.[a-zA-Z.]\+"
+syn match hiveVar     "mapred\(uce\)\=\.[a-zA-Z.]\+"
 
 " Strings and characters:
 syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+
