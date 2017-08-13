@@ -1,6 +1,7 @@
 # hive.vim
 
-Vim syntax highlighting for hive
+This is a [Vim](http://www.vim.org/) plugin that provides language support for
+[Apache Hive](https://hive.apache.org/).
 
 ## Status
 
@@ -25,3 +26,16 @@ are welcome!
 
 1. `cd ~/.vim/bundle`
 2. `git clone https://github.com/jparise/hive.vim.git`
+
+## Hive Language References
+
+The following references are used as the sources of truth with regard to the
+Hive language specification.
+
+- [Hive Language Manual][lm]
+    - [Data Definition Language][lm-ddl]
+    - [Operators and User-Defined Functions][lm-udf]
+
+[lm]: https://cwiki.apache.org/confluence/display/Hive/LanguageManual
+[lm-ddl]: https://cwiki.apache.org/confluence/display/Hive/LanguageManual+DDL
+[lm-udf]: https://cwiki.apache.org/confluence/display/Hive/LanguageManual+UDF
