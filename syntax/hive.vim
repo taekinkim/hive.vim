@@ -29,7 +29,7 @@ syn keyword sqlKeyword	where with option order pctfree privileges procedure
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
 syn keyword sqlKeyword	session share size smallint type using full outer join left right inner true false
 syn keyword sqlKeyword	format delimited fields terminated by collection items external
-syn keyword sqlKeyword	stored sequencefile partitioned data local inpath overwrite clustered buckets sorted
+syn keyword sqlKeyword	stored sequencefile partition partitioned data local inpath overwrite clustered buckets sorted
 syn keyword sqlKeyword	keys extended textfile location distribute directory tablesample using reduce lateral
 syn keyword sqlKeyword	coalesce case when sort
 
@@ -70,10 +70,11 @@ syn keyword sqlType array map struct named_struct create_union timestamp date va
 
 syn match hiveVar     "hive\.[a-zA-Z.]\+"
 syn match hiveVar     "mapred\(uce\)\=\.[a-zA-Z.]\+"
+syn match hiveVar2    "\${[^}]\+}"
 
 " Strings and characters:
-syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+
-syn region sqlString		start=+'+  skip=+\\\\\|\\'+  end=+'+
+syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+ contains=hiveVar2
+syn region sqlString		start=+'+  skip=+\\\\\|\\'+  end=+'+ contains=hiveVar2
 
 " Numbers:
 syn match sqlNumber		"-\=\<\d*\.\=[0-9_]\>"
@@ -109,6 +110,7 @@ if version >= 508 || !exists("did_sql_syn_inits")
   HiLink sqlType	Type
   HiLink sqlTodo	Todo
   HiLink hiveVar        Special
+  HiLink hiveVar2       Special
 
   delcommand HiLink
 endif
