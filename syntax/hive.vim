@@ -70,11 +70,12 @@ syn keyword sqlType array map struct named_struct create_union timestamp date va
 
 syn match hiveVar     "hive\.[a-zA-Z.]\+"
 syn match hiveVar     "mapred\(uce\)\=\.[a-zA-Z.]\+"
-syn match hiveVar2    "\${[^}]\+}"
+" Variable Substitution like ${hiveconf:XX}
+syn match hiveVarSubst "\${[^}]\+}"
 
 " Strings and characters:
-syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+ contains=hiveVar2
-syn region sqlString		start=+'+  skip=+\\\\\|\\'+  end=+'+ contains=hiveVar2
+syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+ contains=hiveVarSubst
+syn region sqlString		start=+'+  skip=+\\\\\|\\'+  end=+'+ contains=hiveVarSubst
 
 " Numbers:
 syn match sqlNumber		"-\=\<\d*\.\=[0-9_]\>"
@@ -110,7 +111,7 @@ if version >= 508 || !exists("did_sql_syn_inits")
   HiLink sqlType	Type
   HiLink sqlTodo	Todo
   HiLink hiveVar        Special
-  HiLink hiveVar2       Special
+  HiLink hiveVarSubst   Special
 
   delcommand HiLink
 endif
