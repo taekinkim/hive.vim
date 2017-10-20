@@ -27,18 +27,18 @@ syn keyword sqlKeyword	successful synonym table then to trigger uid
 syn keyword sqlKeyword	unique user validate values view whenever hivevar
 syn keyword sqlKeyword	where with option order pctfree privileges procedure
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
-syn keyword sqlKeyword	session share size smallint type using full outer join left right inner true false
+syn keyword sqlKeyword	session share size smallint type using full outer join left right inner true false semi cross
 syn keyword sqlKeyword	format delimited fields terminated by collection items external
 syn keyword sqlKeyword	stored sequencefile partition partitioned data local inpath overwrite clustered buckets sorted
 syn keyword sqlKeyword	keys extended textfile location distribute directory tablesample using reduce lateral
-syn keyword sqlKeyword	coalesce case when sort
+syn keyword sqlKeyword	case when sort limit
 
 
 syn keyword sqlOperator	not and or < <= == >= > <> !=
 syn keyword sqlOperator	in any some all between exists
-syn keyword sqlOperator	like escape rlike regexp
+syn keyword sqlOperator	like escape rlike regexp coalesce
 syn keyword sqlOperator union intersect minus
-syn keyword sqlOperator prior distinct isnull count
+syn keyword sqlOperator prior distinct isnull isnotnull count
 syn keyword sqlOperator	sysdate out
 syn keyword sqlOperator	round floor ceil rand concat substr upper ucase
 syn keyword sqlOperator	lower lcase trim ltrim rtrim regexp_replace size
