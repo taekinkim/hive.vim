@@ -17,8 +17,8 @@ syn case ignore
 
 syn keyword sqlSpecial  false null true
 
-syn keyword sqlKeyword	access add as asc begin by check cluster column
-syn keyword sqlKeyword	compress connect current cursor decimal default desc
+syn keyword sqlKeyword	access add as asc begin by change check cluster column
+syn keyword sqlKeyword	compress connect current cursor default desc database
 syn keyword sqlKeyword	else elsif end exception exclusive file for from
 syn keyword sqlKeyword	function group having identified if immediate increment
 syn keyword sqlKeyword	index initial into is level loop maxextents mode modify
@@ -28,7 +28,7 @@ syn keyword sqlKeyword	unique user validate values view whenever hivevar
 syn keyword sqlKeyword	where with option order pctfree privileges procedure
 syn keyword sqlKeyword	public resource return row rowlabel rownum rows
 syn keyword sqlKeyword	session share size smallint type using full outer join left right inner true false semi cross
-syn keyword sqlKeyword	format delimited fields terminated by collection items external
+syn keyword sqlKeyword	format delimited fields terminated collection items external
 syn keyword sqlKeyword	stored sequencefile partition partitioned data local inpath overwrite clustered buckets sorted
 syn keyword sqlKeyword	keys extended textfile location distribute directory tablesample using reduce lateral
 syn keyword sqlKeyword	case when sort limit
@@ -49,7 +49,7 @@ syn keyword sqlOperator	covar_pop covar_samp corr percentile percentil_approx
 syn keyword sqlOperator	histogram_numeric collect_set inline explode
 syn keyword sqlOperator	exp ln log10 log2 log pow sqrt bin hex unhex conv
 syn keyword sqlOperator	abs pmod sin asin cos acos tan atan degrees radians
-syn keyword sqlOperator	positive negative sign e pi binary
+syn keyword sqlOperator	positive negative sign e pi
 syn keyword sqlOperator	map_keys map_values array_contains sort_array
 syn keyword sqlOperator	unix_timestamp dayofmonth hour minute second weekofyear
 syn keyword sqlOperator	datediff date_add date_sub from_utc_timestamp to_utc_timestamp
@@ -63,10 +63,10 @@ syn keyword sqlOperator	xpath xpath_string xpath_boolean xpath_short xpath_int x
 syn keyword sqlStatement alter analyze audit comment commit create
 syn keyword sqlStatement delete drop execute explain grant insert lock noaudit
 syn keyword sqlStatement rename revoke rollback savepoint select set
-syn keyword sqlStatement truncate update describe load use
+syn keyword sqlStatement truncate update describe load use show
 
-syn keyword sqlType tinyint smallint int bigint float double boolean string
-syn keyword sqlType array map struct named_struct create_union timestamp date varchar char
+syn keyword sqlType tinyint smallint int bigint float double boolean string decimal
+syn keyword sqlType array map struct named_struct create_union timestamp date varchar char binary
 
 syn match hiveVar     "hive\.[a-zA-Z.]\+"
 syn match hiveVar     "mapred\(uce\)\=\.[a-zA-Z.]\+"
