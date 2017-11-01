@@ -55,7 +55,7 @@ syn keyword sqlOperator	cast from_unixtime to_date year month day get_json_objec
 syn keyword sqlOperator	sum avg min max transform
 syn keyword sqlOperator	variance var_samp stddev_pop stddev_samp
 syn keyword sqlOperator	covar_pop covar_samp corr percentile percentil_approx
-syn keyword sqlOperator	histogram_numeric collect_set inline explode
+syn keyword sqlOperator	histogram_numeric collect_set collect_list inline explode
 syn keyword sqlOperator	exp ln log10 log2 log pow sqrt bin hex unhex conv
 syn keyword sqlOperator	abs pmod sin asin cos acos tan atan degrees radians
 syn keyword sqlOperator	positive negative sign e pi
@@ -82,7 +82,7 @@ syn keyword sqlType array map struct named_struct create_union timestamp date va
 syn match hiveVar     "hive\.[a-zA-Z.]\+"
 syn match hiveVar     "mapred\(uce\)\=\.[a-zA-Z.]\+"
 " Variable Substitution like ${hiveconf:XX}
-syn match hiveVarSubst "\${[^}]\+}"
+syn match hiveVarSubst "\${[a-zA-Z0-9_.${}:]\+}"
 
 " Strings and characters:
 syn region sqlString		start=+"+  skip=+\\\\\|\\"+  end=+"+ contains=hiveVarSubst
